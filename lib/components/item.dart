@@ -1,10 +1,11 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:toku_app/models/numbers.dart';
 
 class Item extends StatelessWidget {
   final Number number;
 
-  const Item({super.key,required this.number});
+  const Item({super.key, required this.number});
 
   @override
   Widget build(BuildContext context) {
@@ -32,9 +33,15 @@ class Item extends StatelessWidget {
             ),
           ),
           Spacer(flex: 1),
-          Padding(
-            padding: const EdgeInsets.only(right: 16.0),
-            child: Icon(Icons.play_arrow, color: Colors.white, size: 34),
+          IconButton(
+            onPressed: () {
+              final player = AudioPlayer();
+               player.play(
+                AssetSource(number.soundDir),
+              );
+            },
+            icon: Icon(Icons.play_arrow, color: Colors.white, size: 34),
+            focusColor: Color.fromARGB(255, 253, 1, 1),
           ),
         ],
       ),

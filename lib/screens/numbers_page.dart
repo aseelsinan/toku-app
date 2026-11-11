@@ -9,51 +9,61 @@ class NumbersPage extends StatelessWidget {
       image: 'assets/images/numbers/number_one.png',
       japName: 'Ichi',
       engName: 'One',
+      soundDir: 'sounds/numbers/number_one_sound.mp3',
     ),
     Number(
       image: 'assets/images/numbers/number_two.png',
       japName: 'Ni',
       engName: 'Two',
+      soundDir: 'sounds/numbers/number_two_sound.mp3',
     ),
     Number(
       image: 'assets/images/numbers/number_three.png',
       japName: 'San',
       engName: 'Three',
+      soundDir: 'sounds/numbers/number_three_sound.mp3',
     ),
     Number(
       image: 'assets/images/numbers/number_four.png',
       japName: 'Shi',
       engName: 'Four',
+      soundDir: 'sounds/numbers/number_four_sound.mp3',
     ),
     Number(
       image: 'assets/images/numbers/number_five.png',
       japName: 'Go',
       engName: 'Five',
+      soundDir: 'sounds/numbers/number_five_sound.mp3',
     ),
     Number(
       image: 'assets/images/numbers/number_six.png',
       japName: 'Roku',
       engName: 'Six',
+      soundDir: 'sounds/numbers/number_six_sound.mp3',
     ),
     Number(
       image: 'assets/images/numbers/number_seven.png',
       japName: 'Sebun',
       engName: 'Seven',
+      soundDir: 'sounds/numbers/number_seven_sound.mp3',
     ),
     Number(
       image: 'assets/images/numbers/number_eight.png',
       japName: 'Hachi',
       engName: 'Eight',
+      soundDir: 'sounds/numbers/number_eight_sound.mp3',
     ),
     Number(
       image: 'assets/images/numbers/number_nine.png',
       japName: 'Kyu',
       engName: 'nine',
+      soundDir: 'sounds/numbers/number_nine_sound.mp3',
     ),
     Number(
       image: 'assets/images/numbers/number_ten.png',
       japName: 'Ju',
       engName: 'Ten',
+      soundDir: 'sounds/numbers/number_ten_sound.mp3',
     ),
   ];
   @override
@@ -63,22 +73,14 @@ class NumbersPage extends StatelessWidget {
         title: Text('Numbers', style: TextStyle(color: Colors.white)),
         backgroundColor: Color(0xff46322b),
       ),
-      body: ListView(
-        children: [
-          Item(number: numbers[0]),
-          Item(number: numbers[1]),
-          Item(number: numbers[2]),
-          Item(number: numbers[3]),
-          Item(number: numbers[4]),
-          Item(number: numbers[5]),
-          Item(number: numbers[6]),
-          Item(number: numbers[7]),
-          Item(number: numbers[8]),
-          Item(number: numbers[9]),
-        ],
+      body: ListView.builder(
+        itemCount: numbers.length,
+        itemBuilder: (BuildContext context, int num) {
+          return Item(number: numbers[num]);
+        },
       ),
     );
   }
-}
 
-// 137
+  //
+}
