@@ -1,65 +1,65 @@
 import 'package:flutter/material.dart';
 import 'package:toku_app/components/item.dart';
-import 'package:toku_app/models/numbers.dart';
+import 'package:toku_app/models/item_model.dart';
 
 class NumbersPage extends StatelessWidget {
   const NumbersPage({super.key});
-  final List<Number> numbers = const [
-    Number(
+  final List<ItemModel> numbers = const [
+    ItemModel(
       image: 'assets/images/numbers/number_one.png',
       japName: 'Ichi',
       engName: 'One',
       soundDir: 'sounds/numbers/number_one_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_two.png',
       japName: 'Ni',
       engName: 'Two',
       soundDir: 'sounds/numbers/number_two_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_three.png',
       japName: 'San',
       engName: 'Three',
       soundDir: 'sounds/numbers/number_three_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_four.png',
       japName: 'Shi',
       engName: 'Four',
       soundDir: 'sounds/numbers/number_four_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_five.png',
       japName: 'Go',
       engName: 'Five',
       soundDir: 'sounds/numbers/number_five_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_six.png',
       japName: 'Roku',
       engName: 'Six',
       soundDir: 'sounds/numbers/number_six_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_seven.png',
       japName: 'Sebun',
       engName: 'Seven',
       soundDir: 'sounds/numbers/number_seven_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_eight.png',
       japName: 'Hachi',
       engName: 'Eight',
       soundDir: 'sounds/numbers/number_eight_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_nine.png',
       japName: 'Kyu',
       engName: 'nine',
       soundDir: 'sounds/numbers/number_nine_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_ten.png',
       japName: 'Ju',
       engName: 'Ten',
@@ -76,7 +76,7 @@ class NumbersPage extends StatelessWidget {
       body: ListView.builder(
         itemCount: numbers.length,
         itemBuilder: (BuildContext context, int num) {
-          return Item(number: numbers[num]);
+          return Item(itemModel: numbers[num], color: const Color(0xffef9235));
         },
       ),
     );
