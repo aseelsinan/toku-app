@@ -43,7 +43,6 @@ class Item extends StatelessWidget {
               player.play(AssetSource(itemModel.soundDir));
             },
             icon: Icon(Icons.play_arrow, color: Colors.white, size: 34),
-            focusColor: Color.fromARGB(255, 253, 1, 1),
           ),
         ],
       ),

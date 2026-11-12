@@ -68,7 +68,8 @@ class FamilyMembersPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Family Memebers'),
+        title: Text('Family Memebers',
+        style: TextStyle(color:Colors.white),),
         backgroundColor: Color(0xff46322b),
       ),
       body: ListView.builder(

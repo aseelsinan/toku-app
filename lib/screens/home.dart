@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toku_app/components/category.dart';
+import 'package:toku_app/screens/colors_screen.dart';
 import 'package:toku_app/screens/family_members_page.dart';
 import 'package:toku_app/screens/numbers_page.dart';
 
@@ -42,7 +43,11 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-          Category(text: 'Colors', color: Color(0xff79359f)),
+          Category(
+            text: 'Colors',
+            color: Color(0xff79359f),
+            onTap: ()=>Navigator.push(context,MaterialPageRoute(builder: (BuildContext context)=>ColorScreen()))
+          ),
           Category(text: 'Phrases', color: Color.fromARGB(255, 114, 172, 226)),
         ],
       ),
