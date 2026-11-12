@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toku_app/components/item.dart';
+import 'package:toku_app/components/phrases.dart';
 import 'package:toku_app/models/item_model.dart';
 
 class ColorScreen extends StatelessWidget {
@@ -47,7 +48,6 @@ class ColorScreen extends StatelessWidget {
       engName: 'White',
       soundDir: 'sounds/colors/white.wav',
     ),
-    
   ];
   @override
   Widget build(BuildContext context) {
@@ -60,7 +60,7 @@ class ColorScreen extends StatelessWidget {
       body: ListView.builder(
         itemCount: colors.length,
         itemBuilder: (BuildContext context, int index) {
-          return Item(itemModel: colors[index], color: Color(0xff79359f));
+          return Phrases(itemModel: colors[index], color: Color(0xff79359f));
         },
       ),
     );

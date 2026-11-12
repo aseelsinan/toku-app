@@ -76,7 +76,10 @@ class NumbersPage extends StatelessWidget {
       body: ListView.builder(
         itemCount: numbers.length,
         itemBuilder: (BuildContext context, int num) {
-          return Item(itemModel: numbers[num], color: const Color(0xffef9235));
+          return Item(
+            itemModel: numbers[num],
+            color: const Color(0xffef9235),
+          );
         },
       ),
     );

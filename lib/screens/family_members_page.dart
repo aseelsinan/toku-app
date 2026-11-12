@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toku_app/components/item.dart';
+import 'package:toku_app/components/phrases.dart';
 import 'package:toku_app/models/item_model.dart';
 
 class FamilyMembersPage extends StatelessWidget {
@@ -60,23 +61,22 @@ class FamilyMembersPage extends StatelessWidget {
       engName: 'Son',
       soundDir: 'sounds/family_members/son.wav',
     ),
-
-    
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Family Memebers',
-        style: TextStyle(color:Colors.white),),
+        title: Text('Family Memebers', style: TextStyle(color: Colors.white)),
         backgroundColor: Color(0xff46322b),
       ),
       body: ListView.builder(
-        
         itemCount: familymembers.length,
         itemBuilder: (BuildContext context, int num) {
-          return Item(itemModel: familymembers[num], color: Color(0xff558837));
+          return Item(
+            itemModel: familymembers[num],
+            color: Color(0xff558837),
+          );
         },
       ),
     );

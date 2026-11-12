@@ -3,6 +3,7 @@ import 'package:toku_app/components/category.dart';
 import 'package:toku_app/screens/colors_screen.dart';
 import 'package:toku_app/screens/family_members_page.dart';
 import 'package:toku_app/screens/numbers_page.dart';
+import 'package:toku_app/screens/phrases_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -48,7 +49,9 @@ class HomePage extends StatelessWidget {
             color: Color(0xff79359f),
             onTap: ()=>Navigator.push(context,MaterialPageRoute(builder: (BuildContext context)=>ColorScreen()))
           ),
-          Category(text: 'Phrases', color: Color.fromARGB(255, 114, 172, 226)),
+          Category(text: 'Phrases', color: Color.fromARGB(255, 114, 172, 226),
+          onTap:()=> Navigator.push(context,MaterialPageRoute(builder: (BuildContext context)=>PhrasesPage()))),
+          
         ],
       ),
     );

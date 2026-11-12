@@ -10,3 +10,13 @@ class ItemModel {
     required this.soundDir,
   });
 }
+class PhrasesModel {
+  final String japName;
+  final String engName;
+  final String soundDir;
+  const PhrasesModel({
+    required this.japName,
+    required this.engName,
+    required this.soundDir,
+  });
+}
